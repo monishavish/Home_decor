@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  left: 40%;
+  float: left;
+  width: 48.3%;
+  margin-bottom: 16px;
+  padding: 0 60px;
+}
+
+.card {
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color:lightgrey;
+  color:black;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 50%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <h1>About Our Page</h1>
+  <p>The decoration and look of the house play a major role in determining the mood of the place. The decor of the house also has an effect on the mood of the people living in the house, so it is important to pay attention to the décor.</p>
+  <p>A good looking house is good for getting rid of anxiety and stress. Adding decorative touches helps in increasing the appeal of rooms. Remodelling the house and adding new decorative touches is always a good idea.</p>
+  <p>There are several reasons for renovating the rooms. Whether you are bored or the design becomes outdated, or you want to improve the value of a house, you should invest in making improvements.</p>
+  <p>You can improve the energy efficiency of the house with simple upgrades such as adding single panel windows, insulation, replacing lighting fixtures, etc. By adding simple updates, you can save a lot of money for home decor.</p>
+
+<p>Even when the plumbing of kitchen or bathroom is working fine but it is never a bad time to give it an upgrade. The kitchen is one of the most important parts of the house so upgrading it is always a good idea.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Monisha V</h2>
+        <p class="title">Engineering Student</p>
+        <p>Web Developer studies in Acharya Institute of Technology.</p>
+        <p>monishav.17.beis@acharya.ac.in</p>
+        <a href="contact.html"><p><button class="button">Contact</button></p></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <h2>Neha H A</h2>
+        <p class="title">Engineering Student</p>
+        <p>Web Developer studies in Acharya Institute of Technology.</p>
+        <p>nehaha.17.beis@acharya.ac.in</p>
+        <a href="contact.html"><button class="button">Contact</button></p></a>
+      </div>
+    </div>
+  </div>
+</div>
+<center><button><a href="index.html">Back Home!!</a></button></center>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Admin</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            body,html{
+                text-align: center;
+            }
+            dialog{
+              border-radius:2%;
+              border-width:1px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Admin operations</h1>
+        <h2>Tasks</h2>
+            <div class="insert">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">Insert item</button>
+                <div class="modal fade" id="myModal1" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Insert an item</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form method="POST" action="http://localhost/Home%20decor/insert.php" enctype="multipart/form-data">
+                          <input type="text" placeholder="Enter the item name" size="50" name="name"><br><br>
+                          <input type="number" placeholder="Enter the product ID" size="80" name="prod_id"><br><br>
+                          <input type="number" placeholder="Enter the category ID of item" size="80" name="id"><br><br>
+                          <input type="number" placeholder="Enter the price of the item" size="80" name="price"><br><br>
+                          <input type="text" placeholder="Enter the item description" size="50" name="dis"><br><br>
+                          <input type="text" placeholder="Enter the item dimensions" size="50" name="dimen"><br><br>
+                          <input type="number" placeholder="Enter discount on item" size="50" name="discount"><br><br>
+                          <input type="text" placeholder="Enter item type (old/new)" size="50" name="type"><br><br>
+                          <lable>Upload the item's photo</lable>
+                          <input type="file" id="image" name="image"><br><br>
+                          <input type="submit" value="Insert" id="insert" name="insert">
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="delete">
+                <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">Delete item</button>
+                <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      <h4 class="modal-title">Delete an item</h4>
+                    </div>
+                    <div class="modal-body">
+                      <form method="POST" action="delete.php">
+                          <input type="text" placeholder="Enter the product id" size="50" name="prod_id"><br><br>
+                          
+                          <input type="submit" value="Submit">
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" onclick="showDialog()">Delete item</button>
+            <dialog id="mydialog">
+              <div class="modal-header">
+                <h4 class="modal-title">Delete an item</h4>
+                </div>
+              <form method="POST" action="delete.php">
+                <input type="text" placeholder="Enter the product id" size="50" name="prod_id"><br><br>
+                
+                <input type="submit" value="Submit">
+                <br><br>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" onclick="closeDialog()">Close</button>
+                </div>
+            </form>
+
+            </dialog>
+            <script>
+              
+                var x=document.getElementById("mydialog");
+                function showDialog(){
+                  x.show();
+                }
+                function closeDialog(){
+                  x.close();
+              }
+            </script>
+    </body>
+</html>
+
+
+
